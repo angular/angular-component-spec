@@ -10,8 +10,8 @@ See [bower.io](http://bower.io) for more information.
 
 It has two parts:
 
-1. The **consumer** perspective
-2. The **creator/forker** perspective
+1. [The **consumer** perspective](#angularjs-components-consumer)
+2. [The **creator/forker** perspective](#angularjs-components-creator)
 
 The consumer perspective covers all topics on finding and using Angular components, whereas the creator or forker part gives an in-depth description of how to create, structure and publish an Angular component, as well as which naming conventions to follow for the component itself and the resulting bower package.
 
@@ -58,16 +58,47 @@ _This part of the **Reusable AngularJS components** specification is highly insp
 
 ### Table Of Contents
 
+* [Naming Conventions](#naming-conventions)
+    * [Registered Angular components](#registered-angular-components)
 * [Searching and Finding](#searching-and-finding)
     * [Search for packages](#search-for-packages)
     * [Finding packages with keywords](#finding-packages-with-keywords)
 * [Installing packages](#installing-packages)
     * [Installing unregistered packages](#installing-unregistered-packages)
 
+### Naming Conventions
+
+#### Registered Angular components
+To make searching and filtering for Angular components with Bower as easy as possible, the name under which Angular components get registered should match the following pattern.
+
+````
+angular-[optional-namespace]-[thing-name]-[optional-thing-type]
+````
+
+Name should be prefixed with <code>angular-</code>.
+
+##### optional-namespace
+Can be used to group similar components such as
+````
+angular-phonegap-ready
+angular-phonegap-geolocation
+````
+
+##### thing-name
+This is the actual module name.
+It should match the functionality of the module.
+E.g. the <code>geolocation</code> in <code>angular-phonegap-geolocation</code>.
+Or the <code>translate</code> in <code>angular-translate</code>.
+
+##### optional-thing-type
+Could be <code>filter</code>, <code>directive</code> or <code>service</code>.
+This is for clarification if `[thing-name]` isn't enough.
+
+
 ### Searching and Finding
 
 #### Search for packages
-Since registered Angular components should follow a **naming convention**, finding them can be achieved by simply searching for all registered Bower packages which have an _angular_ in their registry name.
+Since registered Angular components follow a **naming convention**, finding them can be achieved by simply searching for all registered Bower packages which have an _angular_ in their registry name.
 
 ````
 $ bower search angular
