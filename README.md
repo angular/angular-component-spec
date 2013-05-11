@@ -15,7 +15,7 @@ It has two parts:
 
 The consumer perspective covers all topics on finding and using Angular components, whereas the creator or forker part gives an in-depth description of how to create, structure and publish an Angular component, as well as which naming conventions to follow for the component itself and the resulting bower package.
 
-### Dependecies
+### Dependencies
 
 This specification also expects that needed tools are already installed and ready to use. 
 Which means the following commands should be used to install the needed tools on a local machine:
