@@ -140,6 +140,30 @@ This works for **every** GitHub repository.
 $ bower install <username>/<repository>
 ````
 
+## TL;DR
+
+Your modules should be publicly distributed with this convention ('Publicly' as in bower names, repository names, website names, etc):
+```
+angular-[optional-namespace]-[thing-name]-[optional-thing-type]
+```
+Example:
+```js
+angular-phonegap-ready
+angular-superman-directives
+```
+
+Your angular modules in the source should have this convention:
+```
+[author-name].[thing-name].[thing-type]
+```
+Example:
+```js
+angular.module('btford.phonegap-ready', []);
+angular.module('doctor-evil.superman-directives.kryptonite', [])
+```
+
+
+
 
 ## AngularJS Components Creator
 
