@@ -25,7 +25,7 @@ Which means the following commands should be used to install the needed tools on
 Visit [https://nodejs.org/download/](https://nodejs.org/download)
 
 **Bower Package Manager**
-```
+```shell
 $ npm install -g bower
 ```
 
@@ -71,27 +71,27 @@ _This part of the **Reusable AngularJS components** specification is highly insp
 #### Registered Angular components
 To make searching and filtering for Angular components with Bower as easy as possible, the name under which Angular components get registered should match the following pattern.
 
-````
+```
 angular-[optional-namespace]-[thing-name]-[optional-thing-type]
-````
+```
 
-Name should be prefixed with <code>angular-</code>.
+Name should be prefixed with `angular-`.
 
 ##### optional-namespace
 Can be used to group similar components such as
-````
+```
 angular-phonegap-ready
 angular-phonegap-geolocation
-````
+```
 
 ##### thing-name
 This is the actual module name.
 It should match the functionality of the module.
-E.g. the <code>geolocation</code> in <code>angular-phonegap-geolocation</code>.
-Or the <code>translate</code> in <code>angular-translate</code>.
+E.g. the `geolocation` in `angular-phonegap-geolocation`.
+Or the `translate` in `angular-translate`.
 
 ##### optional-thing-type
-Could be <code>filter</code>, <code>directive</code> or <code>service</code>.
+Could be `filter`, `directive` or `service`.
 This is for clarification if `[thing-name]` isn't enough.
 
 
@@ -100,29 +100,29 @@ This is for clarification if `[thing-name]` isn't enough.
 #### Search for packages
 Since registered Angular components follow a **naming convention**, finding them can be achieved by simply searching for all registered Bower packages which have an _angular_ in their registry name.
 
-````
+```shell
 $ bower search angular
-````
+```
 Should return a list of registered bower packages with an _angular_ in their name.
 
 #### Finding packages with keywords
 Bower doesn't currently support a search with keywords.
-Filtering packages by keyboard can be done by using <code>bower search</code> in combination with the <code>grep</code> command.
+Filtering packages by keyboard can be done by using `bower search` in combination with the `grep` command.
 So the following command searches for Angular packages with the keyword "phonegap".
 
-````
+```shell
 $ bower search angular | grep "phonegap"
-````
+```
 
 ### Installing packages
-Once the right package is found, one can install it using the Bower <code>install</code> command.
+Once the right package is found, one can install it using the Bower `install` command.
 E.g. installing AngularJS itself as a package would look like this:
 
-````
+```shell
 $ bower install angular
-````
+```
 
-This will download the specified package into the folder which is configured as components folder via <code>.bowerrc</code>.
+This will download the specified package into the folder which is configured as components folder via `.bowerrc`.
 
 #### Installing unregistered packages
 It is possible that there's an AngularJS component on GitHub, which is not registered as bower component.
@@ -136,9 +136,9 @@ See [https://github.com/twitter/bower/issues/120](https://github.com/twitter/bow
 In that cases one can install the package by specifying the GitHub user and the repository.
 This works for **every** GitHub repository.
 
-````
+```shell
 $ bower install <username>/<repository>
-````
+```
 
 ## TL;DR
 
@@ -147,7 +147,7 @@ Your modules should be publicly distributed with this convention ('Publicly' as 
 angular-[optional-namespace]-[thing-name]-[optional-thing-type]
 ```
 Example:
-```js
+```javascript
 angular-phonegap-ready
 angular-superman-directives
 ```
@@ -157,7 +157,7 @@ Your angular modules in the source should have this convention:
 [author-name].[thing-name].[thing-type]
 ```
 Example:
-```js
+```javascript
 angular.module('btford.phonegap-ready', []);
 angular.module('doctor-evil.superman-directives.kryptonite', [])
 ```
