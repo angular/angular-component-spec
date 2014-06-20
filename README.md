@@ -169,7 +169,7 @@ Please don't do these things.
 
 ### Registering controllers, services, filters, etc. on the `ng` module
 
-```
+```javascript
 // this is bad
 angular.module('ng').filter('tel', function (){});
 ```
