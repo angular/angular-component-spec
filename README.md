@@ -165,7 +165,6 @@ angular.module('doctor-evil.superman-directives.kryptonite', [])
 
 
 
-## AngularJS Components Creator
 
 ## References
 
