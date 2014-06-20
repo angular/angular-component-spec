@@ -163,7 +163,20 @@ angular.module('doctor-evil.superman-directives.kryptonite', [])
 ```
 
 
+## Bad Practices
 
+Please don't do these things.
+
+### Registering controllers, services, filters, etc. on the `ng` module
+
+```
+// this is bad
+angular.module('ng').filter('tel', function (){});
+```
+
+Instead create your own module and add it as a dependency to your application's top-level module.
+
+**Why:** this is needlessly frail. See [this issue](https://github.com/angular/angular.js/issues/7709#issuecomment-46300969).
 
 
 ## References
