@@ -1,5 +1,7 @@
 # Specification for reusable AngularJS components
 
+[![Join the chat at https://gitter.im/angular/angular-component-spec](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angular/angular-component-spec?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 _**Attention**: This document is a **WIP**! Since we want to collect as many opinions as possible, feel free to fork and send a Pull Request.
 We hope that once this specification is called final, developers of angular components will do things the same way, which will allow the Angular Team to provide better tooling._
 
